@@ -14,25 +14,23 @@ or follow metthod install dlib in Video
 https://www.youtube.com/watch?v=HqjcqpCNiZg
 ```
 
-# Run command
+# Setup data
+save image person in folder '/facedata/' and rename picture file 'name_number'
+![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/1.png)
+
+# Recognition
+run 'facetrainer.py' for train data set when end process you get file 'trainset.pk' is file trainer
 ```
-$ python3 Picture_Detect_Tracking.py
+$ python facetrainer.py
+```
+# Detection
+run 'facedetection.py' for use 'trainset.pk' to recognition input image
+```
+$ python facedetection.py
 ```
 press "esc" to exit
 
 # Result
-Video result
-```
-https://www.youtube.com/watch?v=jg8nPeTqC3w
-```
+![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/1.png)
 
-detect and tracking
-ID 0 is person and ID 1 is picture
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/1.png)
-
-if ID 0 out of frame ID 1 can be classification as an image.
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/2.png)
-
-if ID 1 out of frame ID 0 can be classification as an person.
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/3.png)
 
