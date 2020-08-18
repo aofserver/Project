@@ -15,22 +15,22 @@ https://www.youtube.com/watch?v=HqjcqpCNiZg
 ```
 
 # Setup data
-save image person in folder '/facedata/' and rename picture file 'name_number'
+save image person in folder `/facedata/` and rename picture file `name_number`
 ![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/1.png)
 
 # Recognition
-run 'facetrainer.py' for train data set when end process you get file 'trainset.pk' is file trainer
+run `facetrainer.py` for train data set when end process you get file `trainset.pk` is file trainer
 ```
 $ python facetrainer.py
 ```
 # Detection
-run 'facedetection.py' for use 'trainset.pk' to recognition input image
+run `facedetection.py` for use 'trainset.pk' to recognition input image
 ```
 $ python facedetection.py
 ```
-press "esc" to exit
+press `esc` to exit
 
 # Result
-![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/1.png)
+![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/2.png)
 
 
