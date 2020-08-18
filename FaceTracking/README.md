@@ -22,7 +22,7 @@ press `esc` to exit
 
 # Result
 
-tracking
+tracking\n
 ![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/1.png)
 
 ![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/2.png)
