@@ -1,5 +1,0 @@
-numpy==1.16.4
-imutils==0.5.2
-opencv-contrib-python==4.2.0.32
-opencv-python==4.1.0.25
-dlib==19.8.1
