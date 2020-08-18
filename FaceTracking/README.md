@@ -22,13 +22,10 @@ press `esc` to exit
 
 # Result
 
-detect and tracking
-ID 0 is person and ID 1 is picture
+tracking
 ![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/1.png)
 
-if ID 0 out of frame ID 1 can be classification as an image.
 ![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/2.png)
 
-if ID 1 out of frame ID 0 can be classification as an person.
 ![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/3.png)
 
