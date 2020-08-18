@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=jg8nPeTqC3w
 
 detect and tracking
 ID 0 is person and ID 1 is picture
-![](https://drive.google.com/uc?id=121fJjVShDtULkScP4DswO8_T3rKokMHY)
+![](https://github.com/aofserver/Project/blob/master/Result/1.png)
 
 if ID 0 out of frame ID 1 can be classification as an image.
 ![](https://drive.google.com/uc?id=1mdnzVe41aiglscx94JonosPq2SPFyfKg)
