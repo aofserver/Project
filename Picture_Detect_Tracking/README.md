@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=HqjcqpCNiZg
 ```
 $ python3 Picture_Detect_Tracking.py
 ```
-press "esc" to exit
+press `esc` to exit
 
 # Result
 Video result
