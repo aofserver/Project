@@ -7,36 +7,34 @@ import dlib
 import statistics
 
 cap = cv2.VideoCapture(0)
-# cap = cv2.VideoCapture("3person_2.mp4")
-
-# img = cv2.imread("pic2.jpg")
-# img = cv2.flip(img, 1)
-# img = cv2.resize(img, None, fx=0.2, fy=0.2)
 
 detector = dlib.get_frontal_face_detector()
-# predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 predictor = dlib.shape_predictor("shape_predictor_5_face_landmarks.dat")
 
 ID_list = {}
 # mask_intersection
-mask_intersection1 = np.ones((720,1280))*0
-mask_intersection2 = np.ones((720,1280))*0
+mask_intersection1 = 0
+mask_intersection2 = 0
 
 subtractor = cv2.createBackgroundSubtractorMOG2(history=1, varThreshold=100, detectShadows=True)
 fgbg = cv2.createBackgroundSubtractorMOG2()
 kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
 img_add = []
 imgsub = 0
+cnt = 0
 Class = ""
 listClass = {}
+
 
 while True:
     _, frame = cap.read()
     frame = cv2.flip(frame, 1)
-    # frame = cv2.resize(frame, None, fx=0.5, fy=0.5)
-    # print(frame.shape[0])
+    if cnt == 0:
+        sh = frame.shape
+        mask_intersection1 = np.ones((sh[0], sh[1])) * 0
+        mask_intersection2 = np.ones((sh[0], sh[1])) * 0
 
-    # frame = img.copy()
+
 
     fgmask = fgbg.apply(frame)
     fgmask = cv2.morphologyEx(fgmask, cv2.MORPH_OPEN, kernel)
@@ -49,16 +47,8 @@ while True:
         img_add.pop(0)
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    #
-    # H = hsv[:, :, 0]
-    # S = hsv[:, :, 1]
-    # V = hsv[:, :, 2]
-
 
     faces = detector(gray)
-    # print("cnt",len(faces))
-    print("============================================", len(faces))
     if len(faces) == 0:
         ID_list = {}
         mask_intersection1 = mask_intersection1 * 0
@@ -74,18 +64,10 @@ while True:
 
         ###########  classification  ############
         cntsubimg = cv2.countNonZero(fgmask[y1:y2, x1:x2])
-        print((cntsubimg) / (abs(y1 - y2) * abs(x1 - x2)))
         if ((cntsubimg) / (abs(y1 - y2) * abs(x1 - x2))) > 0.7:
             Class = "Picture"
-            # frame = cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
-            # cv2.putText(frame, Class, (x1 + 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
         else:
             Class = "Person"
-            # frame = cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            # cv2.putText(frame, Class, (x1 + 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
-
-
 
 
 
@@ -100,7 +82,6 @@ while True:
                     mask_intersection1 = mask_intersection1 * 0
                     mask_intersection2 = mask_intersection2 * 0
                     mask_intersection1[ID_list[i][1]:ID_list[i][3], ID_list[i][0]:ID_list[i][2]] = 1
-                    print("---",ID_list[i][1],ID_list[i][3], ID_list[i][0],ID_list[i][3])
                     cv2.imshow("mask_intersetion1", mask_intersection1)
                     mask_intersection2[y1:y2, x1:x2] = 1
 
@@ -116,9 +97,6 @@ while True:
                         else:
                             listClass[i].append(Class)
 
-                        # C = statistics.mode(listClass[i])
-                        # print("..............",C)
-                        print("listClass", listClass, ">>>>>", listClass[i],"i=",i)
                         if Class == "Picture":
                             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 3)
                             cv2.putText(frame, "ID "+str(i)+" "+Class, (x1 + 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
@@ -137,26 +115,6 @@ while True:
                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                cv2.putText(frame, "ID " + str(ID) + " " + Class, (x1 + 5, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-
-
-
-
-
-
-
-
-        # landmarks = predictor(gray, face)
-        #
-        # # for n in range(0, 68):
-        # for n in range(0, 5):
-        #     x = landmarks.part(n).x
-        #     y = landmarks.part(n).y
-        #
-        #     # cv2.circle(frame, (x, y), 4, (255, 0, 0), -1)
-        #     if n == 4:
-        #         cv2.circle(frame, (x, y), 4, (255, 0, 0), -1)
-        #         cv2.putText(frame, str(hsv[x-50,y][2]), (x-50, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-        #         cv2.putText(frame, str(hsv[x+50, y][2]), (x+50, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
 
     cv2.imshow("Frame", frame)
