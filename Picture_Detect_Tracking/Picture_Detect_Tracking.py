@@ -33,8 +33,7 @@ while True:
         sh = frame.shape
         mask_intersection1 = np.ones((sh[0], sh[1])) * 0
         mask_intersection2 = np.ones((sh[0], sh[1])) * 0
-
-
+        cnt = cnt + 1
 
     fgmask = fgbg.apply(frame)
     fgmask = cv2.morphologyEx(fgmask, cv2.MORPH_OPEN, kernel)
