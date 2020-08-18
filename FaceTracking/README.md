@@ -16,15 +16,11 @@ https://www.youtube.com/watch?v=HqjcqpCNiZg
 
 # Run command
 ```
-$ python3 Picture_Detect_Tracking.py
+$ python3 FaceTracking.py
 ```
 press "esc" to exit
 
 # Result
-Video result
-```
-https://www.youtube.com/watch?v=jg8nPeTqC3w
-```
 
 detect and tracking
 ID 0 is person and ID 1 is picture
