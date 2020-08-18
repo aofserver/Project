@@ -28,8 +28,8 @@ ID 0 is person and ID 1 is picture
 ![](https://github.com/aofserver/Project/blob/master/Result/1.png)
 
 if ID 0 out of frame ID 1 can be classification as an image.
-![](https://drive.google.com/uc?id=1mdnzVe41aiglscx94JonosPq2SPFyfKg)
+![](https://github.com/aofserver/Project/blob/master/Result/2.png)
 
 if ID 1 out of frame ID 0 can be classification as an person.
-![](https://drive.google.com/uc?id=1hIjEpy8biqkj-OSBs6BEXQqG6pDFHmPr)
+![](https://github.com/aofserver/Project/blob/master/Result/3.png)
 
