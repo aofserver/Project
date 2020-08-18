@@ -34,3 +34,10 @@ press `esc` to exit
 ![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/2.png)
 
 
+# Reference
+```
+https://www.youtube.com/watch?v=gT3uELrVpOs&t=2s
+```
+
+
+
