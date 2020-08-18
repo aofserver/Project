@@ -22,9 +22,6 @@ press `esc` to exit
 
 # Result
 
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/1.png)
+![](https://github.com/aofserver/Project/blob/master/FaceTracking/etc/1.png)
 
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/2.png)
-
-![](https://github.com/aofserver/Project/blob/master/Picture_Detect_Tracking/Result/3.png)
-
+![](https://github.com/aofserver/Project/blob/master/FaceTracking/etc/2.png)
