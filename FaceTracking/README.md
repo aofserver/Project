@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=HqjcqpCNiZg
 ```
 $ python3 FaceTracking.py
 ```
-press "esc" to exit
+press `esc` to exit
 
 # Result
 
