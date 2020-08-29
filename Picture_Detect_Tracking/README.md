@@ -22,9 +22,8 @@ press `esc` to exit
 
 # Result
 Video result
-```
 [YouTube](https://www.youtube.com/watch?v=jg8nPeTqC3w).
-```
+
 
 detect and tracking
 ID 0 is person and ID 1 is picture
