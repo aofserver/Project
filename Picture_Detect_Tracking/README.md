@@ -21,8 +21,8 @@ $ python3 Picture_Detect_Tracking.py
 press `esc` to exit
 
 # Result
-Video result
-[YouTube](https://www.youtube.com/watch?v=jg8nPeTqC3w).
+Video result\n
+[YouTube](https://www.youtube.com/watch?v=jg8nPeTqC3w)
 
 
 detect and tracking
