@@ -23,7 +23,7 @@ press `esc` to exit
 # Result
 Video result
 ```
-https://www.youtube.com/watch?v=jg8nPeTqC3w
+[YouTube](https://www.youtube.com/watch?v=jg8nPeTqC3w).
 ```
 
 detect and tracking
