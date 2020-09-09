@@ -17,7 +17,7 @@ save image person in folder `/facedata/` and rename picture file `name_number`
 ![](https://github.com/aofserver/Project/blob/master/Face%20Recognition%20Dlib/etc/1.png)
 
 # Recognition
-run `facetrainer.py` for train data set when end process you get file `trainset.pk` is file trainer
+run `facetrainer.py` for train dataset when end process you get file `trainset.pk` is file trainer
 ```
 $ python facetrainer.py
 ```
